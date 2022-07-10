@@ -1,0 +1,56 @@
+/*------------------------------------
+  Collage Images
+------------------------------------*/
+.image-collage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  a {
+    img {
+      max-width: 60%;
+      border: $border-color $collage-img-border-width solid;
+    }
+    &:nth-child(1) {
+      position: absolute;
+      transform: $collage-img-child1-transform;
+      top: $collage-img-child1-top;
+      left:0;
+      &:hover {
+        transform: $collage-img-child1-hover-transform;
+      }
+    }
+    &:nth-child(2) {
+      position: relative;
+      &:hover {
+        transform: $collage-img-child2-hover-transform;
+      }
+    }
+    &:nth-child(3) {
+      position: absolute;
+      transform: $collage-img-child3-transform;
+      bottom: $collage-img-child3-bottom;
+      left:0;
+      &:hover {
+        transform: $collage-img-child3-hover-transform;
+      }
+    }
+    &:nth-child(4) {
+      position: absolute;
+      transform: $collage-img-child4-transform;
+      bottom: $collage-img-child4-bottom;
+      left:0;
+      &:hover {
+        transform: $collage-img-child4-hover-transform;
+      }
+    }
+    &:nth-child(5) {
+      position: absolute;
+      transform: $collage-img-child5-transform;
+      bottom: $collage-img-child5-bottom;
+      left:0;
+      &:hover {
+        transform: $collage-img-child5-hover-transform;
+      }
+    }
+  }
+}

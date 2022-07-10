@@ -1,0 +1,49 @@
+/*------------------------------------
+  Hover
+------------------------------------*/
+.hover-none {
+  .d-hover-block {
+    display: none;
+  }
+  &:hover {
+    .d-hover-block {
+      display: block;
+      transition: all .3s ease;
+    }
+  }
+}
+.hover {
+  &-box {
+    &-up {
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+    &-down {
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: translateY(10px);
+      }
+    }
+  }
+  &-button {
+    &-up {
+      transition: all .1s ease-in-out;
+      &:hover {
+        box-shadow: 0 0.2rem 1.25rem 0 #4d5bed1a;
+        transform: translate3d(0,-2px,0);
+      }
+    }
+  }
+  // Shadow
+  &-shadow-sm{
+    &:hover {
+      -webkit-box-shadow:0 0.2rem 1.25rem 0 #4d5bed1a;
+      box-shadow: 0 0.2rem 1.25rem 0 #4d5bed1a;
+    }
+  }
+}
+.cursor-pointer {
+  cursor: pointer;
+}

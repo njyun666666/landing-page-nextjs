@@ -1,0 +1,130 @@
+/*------------------------------------
+  Ribbon
+------------------------------------*/
+.ribbon {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  text-align: right;
+  span {
+    color: $white;
+    text-align: center;
+    display: block;
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    &::before {
+      content: '';
+      position: absolute; 
+      left: 0px; top: 100%;
+      z-index: -1;
+      border-left: $ribbon-before-after-border-width solid #9d9d9d;
+      border-right: $ribbon-before-after-border-width solid transparent;
+      border-bottom: $ribbon-before-after-border-width solid transparent;
+      border-top: $ribbon-before-after-border-width solid #9d9d9d;
+    }
+    &::after {
+      content: '';
+      position: absolute; 
+      right: 0%; top: 100%;
+      z-index: -1;
+      border-right: $ribbon-before-after-border-width solid #9d9d9d;
+      border-left: $ribbon-before-after-border-width solid transparent;
+      border-bottom: $ribbon-before-after-border-width solid transparent;
+      border-top: $ribbon-before-after-border-width solid #9d9d9d;
+    }
+
+  }
+  &-lg {
+    font-size: $ribbon-lg-size;
+    width: $ribbon-lg-width;
+    height: $ribbon-lg-height;
+    top: $ribbon-lg-top;
+    span {
+      line-height: $ribbon-lg-span-line-height;
+      width: $ribbon-lg-span-width;
+      top: $ribbon-lg-span-top;
+    }
+    &.ribbon-start {
+      left: $ribbon-lg-ribbon-left;
+      span {
+        left: $ribbon-lg-ribbon-span-left;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+    }
+    &.ribbon-end {
+      right: $ribbon-lg-ribbon-right;
+      span {
+        right: $ribbon-lg-ribbon-span-right;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+  &-md {
+    font-size: $ribbon-md-size;
+    width: $ribbon-md-width;
+    height: $ribbon-md-height;
+    top: $ribbon-md-top;
+    span {
+      line-height: $ribbon-md-span-line-height;
+      width: $ribbon-md-span-width;
+      top: $ribbon-md-span-top;
+    }
+    &.ribbon-start {
+      left: $ribbon-md-ribbon-left;
+      span {
+        left: $ribbon-md-ribbon-span-left;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+    }
+    &.ribbon-end {
+      right: $ribbon-md-ribbon-right;
+      span {
+        right: $ribbon-md-ribbon-span-right;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+  &-sm {
+    font-size: $ribbon-sm-size;
+    width: $ribbon-sm-width;
+    height: $ribbon-sm-height;
+    top: $ribbon-sm-top;
+    span {
+      line-height: $ribbon-sm-span-line-height;
+      width: $ribbon-sm-span-width;
+      top: $ribbon-sm-span-top;
+    }
+    &.ribbon-start {
+      left: $ribbon-sm-ribbon-left;
+      span {
+        left: $ribbon-sm-ribbon-span-left;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+    }
+    &.ribbon-end {
+      right: $ribbon-sm-ribbon-right;
+      span {
+        right: $ribbon-sm-ribbon-span-right;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+}
+.no-gutters, .g-0 {
+  .ribbon {
+    &-lg, &-md, &-sm {
+      &.ribbon-start {
+        left:-7px;
+      }
+      &.ribbon-end {
+        right:-7px;
+      }
+    }
+  }
+}

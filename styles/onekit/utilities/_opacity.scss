@@ -1,0 +1,21 @@
+/*------------------------------------
+    Opacity
+------------------------------------*/
+.opacity-0 { opacity: 0; }
+
+@for $opa from 1 through 10 {
+  .opacity-#{$opa*10} {
+    opacity: calc( $opa*10 / 100 ) !important;
+  }
+}
+
+// overlay
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  border-radius: inherit;
+}

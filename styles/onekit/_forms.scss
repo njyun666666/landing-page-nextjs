@@ -1,0 +1,19 @@
+/*----------------------------------
+  Forms
+------------------------------------*/
+.contact-area {
+  .icon {
+    margin-top: $contact-icon-margin-top;
+    font-size: $contact-icon-font-size;
+  }
+  &>div {
+    margin-bottom: $contact-item-margin-bottom;
+  }
+}
+
+// Form Pilled Shape
+.form-pill {
+  border-radius: $border-radius-pill;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

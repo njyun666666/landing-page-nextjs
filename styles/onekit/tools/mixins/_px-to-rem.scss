@@ -1,0 +1,17 @@
+//
+// Convert px to rem
+//
+
+// e.g. @include px-to-rem(padding, 8px 20px);
+@mixin px-to-rem($one-property, $one-values) {
+  $one-rem: ();
+  @each $one-value in $one-values {
+    @if index((0, 0px), $one-value) or $one-value == auto {
+      $one-rem: append($one-rem, $one-value);
+    }
+    @else {
+      $one-rem: append($one-rem, parseInt($one-value));
+    }
+  }
+  #{$one-property}: $one-rem;
+}

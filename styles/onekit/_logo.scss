@@ -1,0 +1,50 @@
+// logo
+.main-logo {
+  display: flex;
+  align-items: center;
+  img {
+    max-height: $logo-brand-max-height;
+  }
+}
+// logo dark to light 
+.dark-to-light {
+  .main-logo {
+    .logo-light {
+      display:block
+    }
+    .logo-dark {
+      display:none;
+    }
+  }
+  &.navbar-scrolled {
+    .main-logo {
+      .logo-light {
+        display:none
+      }
+      .logo-dark {
+        display:block;
+      }
+    }
+  }
+}
+// logo light to dark 
+.light-to-dark {
+  .main-logo {
+    .logo-light {
+      display:none
+    }
+    .logo-dark {
+      display:block;
+    }
+  }
+  &.navbar-scrolled {
+    .main-logo {
+      .logo-light {
+        display:block
+      }
+      .logo-dark {
+        display:none;
+      }
+    }
+  }
+}

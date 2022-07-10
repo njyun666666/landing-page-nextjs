@@ -1,0 +1,136 @@
+/*----------------------------------
+  Progress Bars
+------------------------------------*/
+.progress-vertical {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  background-color: $progress-vertical-background-color;
+  height: $progress-vertical-height;
+
+  &-line {
+    position: relative;
+    background-color: var(--#{$prefix}primary);
+    height: 0;
+    transition: 2s linear;
+    &::before {
+      content: attr(data-percent)"%";
+      position: absolute;
+      right: 0px;
+      left: 0px;
+      padding: $progress-vertical-before-padding;
+      color: transparent;
+      font-size: $progress-vertical-before-font-size;
+      border-radius: $progress-vertical-before-border-radius;
+      font-weight: bold;
+      width: $progress-vertical-before-width;
+      margin: $progress-vertical-before-margin;
+    }
+    &.text-white {
+      &::before {
+        color: white;
+        padding-top: 10px;
+      }
+    }
+  }
+  &-value {
+    &::before {
+      content: attr(data-percent);
+      font-size: $progress-vertical-value-font-size;
+    }
+  }
+}
+
+/*------------------------------------
+	Progress top scroll
+------------------------------------*/
+.progress { 
+  &-one {
+    height: $progress-1-height;
+  }
+  &-two {
+    height: $progress-2-height;
+  }
+  &-three {
+    height: $progress-3-height;
+  }
+  &-one, &-two, &-three {
+    display:inline-block;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    border:none;
+    background-color:transparent;
+    z-index:99999;
+    color: var(--#{$prefix}primary);
+    .progress-container {
+      width:100%;
+      background-color:transparent;
+      position:fixed;
+      top:0;
+      left:0;
+      display:block;
+      .progress-bar{
+        background-color: var(--#{$prefix}primary);
+        width:0%;
+        display:block;
+        height:inherit
+      }
+    }
+    &::-webkit-progress-bar{
+      background-color:rgba(221,221,221,.05);
+    }
+    &::-webkit-progress-value{
+      background-color: var(--#{$prefix}primary);
+    }
+    &::-moz-progress-bar{
+      background-color: var(--#{$prefix}primary);
+    }
+    &:after{
+      background-image:none
+    }
+  }
+}
+.admin-bar {
+  .progress { 
+    &-one, &-two, &-three {
+      top:32px;
+      background:rgba(221,221,221,.05);
+    }
+  }
+}
+
+// progress bar
+.progress-area {
+  height: $progress-area-height;
+  background: $progress-area-background;
+  border-radius: $progress-area-border-radius;
+  .progress-bar {
+    background-color: var(--#{$prefix}primary);
+  }
+}
+.progress-bar {
+  background-color: var(--#{$prefix}primary);
+  height: $progress-area-height;
+  border-radius: $progress-area-border-radius;
+  position: relative;
+  width: 0;
+  transition: 2s linear;
+  &::before {
+    content: attr(data-percent)"%";
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    padding: 1px 0px;
+    color: $white;
+    font-size: $progress-bar-before-font-size;
+    border-radius: $progress-bar-before-border-radius;
+    font-weight: bold;
+    width: $progress-bar-before-width;
+    margin: 0px auto;
+  }
+}

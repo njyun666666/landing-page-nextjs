@@ -1,0 +1,121 @@
+/*------------------------------------
+  Kit
+------------------------------------*/
+//Mouse scroll
+.masthead{
+  text-align: center;
+  bottom: $masthead-bottom;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+// mouse scroll 
+.mouse-icon {
+  margin-left: auto;
+  margin-right: auto;
+  width: $mouse-icon-width;
+  padding: $mouse-icon-padding;
+  height: $mouse-icon-height;
+  border: $white 2px solid;
+  border-radius: $mouse-icon-border-radius;
+  opacity: 0.8;
+  box-sizing: content-box;
+}
+.scroller {
+  width: $mouse-scroller-width;
+  height: $mouse-scroller-height;
+  border-radius: 25%;
+  background-color: $white;
+  animation-name: scroll;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+// Scribble img
+.scribble {
+  &:not(.position-relative){
+    position: absolute;
+  }
+  svg{
+    background: none !important;
+  }
+}
+@for $i from 2 through 8 {
+  .scale-#{$i}{
+    svg{
+      transform: scale(#{$i});
+    }
+  }
+}
+
+// Showcase img
+.showcase-img {
+  position: relative;
+  min-height: $showcase-img-min-height;
+  background-size: cover;
+}
+
+// icon in center
+.icon-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+// rotate
+.rotate {
+  &-45 { /*rtl:begin:ignore*/    
+    transform: rotate(45deg); 
+    /*rtl:end:ignore*/
+  }
+  &-90 { /*rtl:begin:ignore*/    
+    transform: rotate(90deg); 
+    /*rtl:end:ignore*/
+  }
+  &-135 { /*rtl:begin:ignore*/
+    transform: rotate(135deg); 
+    /*rtl:end:ignore*/
+  }
+  &-180 { /*rtl:begin:ignore*/
+    transform: rotate(180deg); 
+    /*rtl:end:ignore*/
+  }
+  &-225 { /*rtl:begin:ignore*/
+    transform: rotate(225deg); 
+    /*rtl:end:ignore*/
+  }
+  &-270 { /*rtl:begin:ignore*/
+    transform: rotate(270deg); 
+    /*rtl:end:ignore*/
+  }
+  &-315 { /*rtl:begin:ignore*/
+    transform: rotate(315deg); 
+    /*rtl:end:ignore*/
+  }
+}
+
+// text shadow 
+.text-shadow {
+  text-shadow: 0em 0.1em 2em rgba(0,0,0,0.4);
+}
+
+// background gradient
+.bg-gradient {
+  &-primary {
+    background-color: var(--#{$prefix}primary);
+    background-image: linear-gradient(130deg,$primary-600 15%, $primary 40%, $primary 60%, $primary-400 100%)!important;
+  }
+  &-secondary {
+    background-color: var(--#{$prefix}secondary);
+    background-image: linear-gradient(130deg,$secondary-600 15%, $secondary 40%, $secondary 60%, $secondary-800 100%)!important;
+  }
+}

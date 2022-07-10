@@ -1,0 +1,8 @@
+//
+// Functions
+//
+
+// Converting a px based font-size to rem.
+@function parseInt($size) {
+  @return calc($size / 16px * 1rem)
+}

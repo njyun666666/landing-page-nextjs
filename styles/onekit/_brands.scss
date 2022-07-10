@@ -1,0 +1,27 @@
+/*------------------------------------
+  Clients
+------------------------------------*/
+.brands {
+  &-item {
+    border: {
+      width: 1px 0 1px 1px;
+      color: $hr-color;
+      style: solid;
+    }
+    padding: map-get($spacers, 7) 0;
+  }
+  &-image {
+    margin-left: auto;
+    margin-right: auto;
+    filter: $brand-filter;
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+    opacity: .5;
+    transition: all 0.3s ease;
+    &:hover {
+      filter: $brand-filter-hover;
+      -webkit-filter: grayscale(0%);
+      opacity: 1;
+    }
+  }
+}

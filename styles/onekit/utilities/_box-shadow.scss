@@ -1,0 +1,14 @@
+/*----------------------------------
+  Box Shadow
+------------------------------------*/
+.shadow{
+  &-bottom {
+    box-shadow: $box-shadow-bottom;
+  }
+  &-right-bottom {
+    box-shadow: $box-shadow-right-bottom;
+  }
+}
+.collapse-shadow {
+  box-shadow: $collapse-shadow;
+}

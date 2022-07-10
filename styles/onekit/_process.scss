@@ -1,0 +1,93 @@
+/*------------------------------------
+  Process
+------------------------------------*/ 
+.process {
+  &-vertical {
+    list-style: none;
+    margin: 0;
+    &-item {
+      display: flex;
+      &:last-child {
+        .process-vertical-icon{
+          &::before {
+            bottom: $process-vertical-bottom;
+          }
+        }
+      }
+    }
+    &-icon {
+      position: relative;
+      width: $process-icon-width;
+      flex-shrink: 0;
+      text-align: center;
+      &-bg {
+        background: $light;
+        border: $border-color $process-border-width solid;
+        height: $process-icon-bg-height;
+        width: $process-icon-bg-width;
+      }
+      span {
+        font-size: $process-icon-font-size;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 36%;
+        top: $process-icon-before-top;
+        bottom: $process-icon-before-bottom;
+        border-left: 2px dashed $border-color;
+      }
+    }
+    &-content {
+      margin-left: $process-vertical-content-margin;
+      margin-bottom: $process-vertical-content-margin;
+    }
+  }
+  // process horizontal 
+  &-horizontal {
+    li{
+      list-style-type: none;
+      float: left;
+      width: 25%;
+      position: relative;
+      text-align: center;
+      font-size: $process-horizontal-li-font-size;
+      svg {
+        border: $border-color $process-border-width solid;
+        background: $light;
+        border-radius: 50%;
+      }
+      &.active, &:hover {
+        color: var(--#{$prefix}primary);
+        cursor: pointer;
+      }
+      &:before{
+        width: $process-horizontal-before-width;
+        height: $process-horizontal-before-height;
+        line-height: $process-horizontal-before-line-height;
+        border: $process-border-width solid #ddd;
+        display: block;
+        text-align: center;
+        margin: $process-horizontal-before-margin;
+        border-radius:50%;
+        background-color: $white;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        border-bottom: $border-color 2px dashed;
+        top: $process-horizontal-after-top;
+        left: -50%;
+        z-index: -1;
+      }
+      &:first-child:after{
+        content: none;
+      }
+    }
+    i{
+      font-size: $process-horizontal-i-font-size;
+    }
+  }
+}

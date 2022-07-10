@@ -1,0 +1,193 @@
+/*----------------------------------
+  Buttons
+------------------------------------*/
+.btn {
+  cursor: pointer;
+  transition: .2s ease;
+  &.focus,
+  &:focus
+  &.active:focus,
+  &:active:focus {
+    outline: 0 none;
+    box-shadow: none;
+    border-color: transparent;
+  }
+  // Circle
+  &-circle {
+    border-radius: 100%;
+    padding: 0;
+    width: $btn-circle-width;
+    height: $btn-circle-width;
+    &.btn-sm {
+      width: $btn-circle-width-sm;
+      height: $btn-circle-width-sm;
+    }
+    &.btn-lg {
+      width: $btn-circle-width-lg;
+      height: $btn-circle-width-lg;
+    }
+  }
+  // Pill
+  &-pill {
+    border-radius: $border-radius-pill;
+  }
+  // Link
+  &-link {
+    color: var(--#{$prefix}primary);
+    &:hover {
+      color: var(--#{$prefix}primary);
+    }
+  }
+  // social button 
+  &-facebook {
+    background: $facebook ;
+    border-color: $facebook;
+    color:$white;
+    &:hover, &:focus {
+      color: $white;
+      background: rgba($facebook, .9);
+    }
+  }
+  &-twitter {
+    background: $twitter ;
+    border-color: $twitter ;
+    color:$white;
+    &:hover, &:focus {
+      color: $white;
+      background: rgba($twitter, .9);
+    }
+  }
+  &-youtube {
+    background: $youtube ;
+    border-color: $youtube ;
+    color:$white;
+    &:hover, &:focus {
+      color: $white;
+      background: rgba($youtube, .9);
+    }
+  }
+  &-instagram {
+    background: $instagram ;
+    border-color: $instagram ;
+    color:$white;
+    &:hover, &:focus {
+      color: $white;
+      background: rgba($instagram, .9);
+    }
+  }
+  &-linkedin {
+    background: $linkedin ;
+    border-color: $linkedin ;
+    color:$white;
+    &:hover, &:focus {
+      color: $white;
+      background: rgba($linkedin, .9);
+    }
+  }
+  &-github {
+    background: $github ;
+    border-color: $github ;
+    color:$white;
+    &:hover, &:focus {
+      color: $white;
+      background: rgba($github, .9);
+    }
+  }
+  &-google {
+    background: $google ;
+    border-color: $google ;
+    color:$white;
+    &:hover, &:focus {
+      color: $white;
+      background: rgba($google, .9);
+    }
+  }
+  &-telegram {
+    background: $telegram ;
+    border-color: $telegram ;
+    color:$white;
+    &:hover, &:focus {
+      color: $white;
+      background: rgba($telegram, .9);
+    }
+  }
+  &-pinterest {
+    background: $pinterest ;
+    border-color: $pinterest ;
+    color:$white;
+    &:hover, &:focus {
+      color: $white;
+      background: rgba($pinterest, .9);
+    }
+  }
+  &-vimeo {
+    background: $vimeo ;
+    border-color: $vimeo ;
+    color:$white;
+    &:hover, &:focus {
+      color: $white;
+      background: rgba($vimeo, .9);
+    }
+  }
+  &-vk {
+    background: $vk ;
+    border-color: $vk ;
+    color:$white;
+    &:hover, &:focus {
+      color: $white;
+      background: rgba($vk, .9);
+    }
+  }
+  // btn accordion 
+  &-accordion {
+    &.btn-link {
+      color: $heading-color;
+      &:hover {
+        color: $heading-color;
+      }
+    }
+  }
+  // btn google play and ios 
+  &-app {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-width: $btn-app-min-width;
+  }
+}
+// play button
+.play {
+  &-btn {
+    border-radius: 50%;
+    text-align: center;
+    line-height: $play-btn-line-height;
+    -webkit-animation: animate 2s linear infinite;
+    animation: animate 2s linear infinite;
+    cursor: pointer;
+    width: $play-btn-width;
+    height: $play-btn-height;
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    &-icon {
+      color: $play-btn-color;
+      font-size: $play-btn-font-size;
+    }
+    &-hover {
+      border-radius: 50%;
+      text-align: center;
+      line-height: $play-btn-line-height;
+      cursor: pointer;
+      width: $play-btn-width;
+      height: $play-btn-height;
+      z-index: -1;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+}

@@ -1,0 +1,136 @@
+/*------------------------------------
+  Pricing
+------------------------------------*/
+.pricing-table {
+	&-one {
+		position: relative;
+		background-color: $white;
+	}
+	&-two {
+		position: relative;
+		background-color: $white;
+		margin-bottom: $pricing-margin-bottom;
+		.pricing-header {
+			position: relative;
+			padding: map-get($spacers, 5) map-get($spacers, 6) map-get($spacers, 3);
+	
+			.pricing-fee {
+				display: block;
+				line-height: .84;
+			}
+	
+			.pricing-title {
+				opacity: .8;
+			}
+
+			.sub-head {
+				line-height: 1.5;
+				margin-bottom: $pricing-subhead-margin-bottom;
+			}
+	
+			.pricing-decoration {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+		.pricing-content {
+			padding: 0 map-get($spacers, 6) map-get($spacers, 5);
+	
+			.disabled .u-icon {
+				color: $primary-300;
+				background-color: rgba($primary-300, .1);
+			}
+		}
+	
+		.disabled {
+			color: $primary-300;
+		}
+	}
+	&-three {
+		position: relative;
+		background-color: $white;
+		margin-bottom: 1rem;
+		.pricing-header {
+			position: relative;
+			padding: map-get($spacers, 6) map-get($spacers, 4);
+	
+			.pricing-fee {
+				line-height: .84;
+			}
+	
+			.pricing-title {
+				opacity: .8;
+				margin-top: $pricing-margin-top;
+			}
+	
+			.pricing-decoration {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+		.pricing-content {
+			padding: map-get($spacers, 4);
+	
+			.disabled .u-icon {
+				color: $primary-300;
+				background-color: rgba($primary-300, .1);
+			}
+		}
+	
+		.disabled {
+			color: $primary-300;
+		}
+	}
+}
+.line-after {
+    height: .2rem;
+    width: 100%;
+}
+.js-yearly {
+	display: none;
+}
+.slideToggle {
+	display: flex;
+	justify-content: center;
+    i {
+		margin: 0 1rem;
+	}
+}
+.form-switch {
+	align-items: center;
+	display: flex;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	justify-content: space-between;
+	margin-bottom: $pricing-form-switch-margin-bottom;
+	i {
+		position: relative;
+		display: inline-block;
+		width: $pricing-form-switch-width;
+		height: $pricing-form-switch-height;
+		border: $pricing-border-width solid $border-color;
+		border-radius: $pricing-form-switch-border-radius;
+		transition: all 0.3s linear;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: $pricing-form-switch-after-width;
+			height: $pricing-form-switch-after-height;
+			background-color: var(--#{$prefix}primary);
+			border-radius: $pricing-form-switch-border-radius;
+			transform: translate3d(4px, 3px, 0);
+			transition: all 0.2s ease-in-out;
+		}
+	}
+	input {
+		display: none;
+		&:checked + i::after {
+			transform: translate3d(54px, 3px, 0);
+		}
+	}
+}

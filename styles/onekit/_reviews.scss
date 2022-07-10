@@ -1,0 +1,138 @@
+/*----------------------------------
+  Reviews
+------------------------------------*/
+.reviews {
+  &-one, &-two  {
+    position: relative;
+    background-color: $white;
+    box-shadow: $box-shadow-sm;
+    padding-top: $reviews-padding;
+    padding-right: $reviews-padding;
+    padding-bottom: $reviews-padding;
+    padding-left: $reviews-padding-left;
+    &::before {
+      @include content-review();
+      position: absolute;
+      transform:rotate(0deg) #{"/*rtl:rotate(180deg)*/;"};
+      opacity: $reviews-before-opacity;
+      width:$post-blockquote-width;
+      height:$post-blockquote-height;
+      top: $reviews-before-top;
+      left: $reviews-before-left;
+    }
+    &-thumb {
+      width: $reviews-thumb-width;
+      height: $reviews-thumb-height;
+    }
+  }
+  &-one {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: $reviews-after-bottom;
+      left: $reviews-after-left;
+      display: block;
+      width: 0;
+      height: 0;
+      border: {
+        style: solid;
+        color: $white transparent transparent transparent;
+        top-width: $reviews-after-border-width;
+        left-width: 0;
+        right-width: $reviews-after-border-width;
+        bottom-width:0;
+      }
+      filter: drop-shadow(2px 2px 1px rgba(0,0,0, .1));
+    }
+  }
+  &-two {
+    &::after {
+      content: "";
+      position: absolute;
+      top: $reviews-two-after-top;
+      left: $reviews-two-after-left;
+      display: block;
+      width: 0;
+      height: 0;
+      border: {
+        style: solid;
+        width: $reviews-two-after-border-width;
+        color: transparent transparent $white transparent;
+      }
+      filter: drop-shadow(1px -1px 1px rgba(0,0,0, .1));
+    }
+  }
+  &-three {
+    position: relative;
+    background-color: $white;
+    box-shadow: $box-shadow-sm;
+    padding: $reviews-padding;
+    &-thumb {
+      width: $reviews-thumb-width;
+      height: $reviews-thumb-height;
+    }
+  }
+  &-four, &-five {
+    position: relative;
+    background-color: $white;
+    box-shadow: $box-shadow-sm;
+    @include px-to-rem(padding, 30px 30px 40px);
+    &::after {
+      @include content2-review();
+      position: absolute;
+      transform:rotate(0deg) #{"/*rtl:rotate(180deg)*/;"};
+      opacity: $reviews-before-opacity;
+      width:$post-blockquote-width;
+      height:$post-blockquote-height;
+      right: $reviews-four-after-right;
+      bottom: $reviews-four-after-bottom;
+    }
+    &-thumb {
+      width: $reviews-thumb-width;
+      height: $reviews-thumb-height;
+    }
+  }
+  &-five {
+    position: relative;
+    margin-left: $reviews-five-margin-left;
+    background-color: $white;
+    box-shadow: $box-shadow-sm;
+    padding-top: $reviews-padding;
+    padding-right: $reviews-padding;
+    padding-bottom: $reviews-padding;
+    padding-left: $reviews-five-padding-left;
+  }
+}
+.thumb-minus {
+  margin-top: $thumb-minus-margin-top;
+  margin-left: $thumb-minus-margin-left;
+}
+.thumb-start-minus {
+  top: 50%;
+  margin-top: $thumb-left-minus-margin-top;
+  margin-left: 0;
+}
+
+// ratings
+.ratings {
+  padding: 0;
+  margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+  li {
+    padding: 0;
+    margin: $ratings-li-margin;
+    list-style: none;
+    svg{
+      stroke: $primary-700;
+    }
+    &.active {
+      color: $ratings-li-stroke;
+      svg{
+        .rating-svg {
+          stroke: $ratings-li-stroke;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/*------------------------------------
+	Back to top
+------------------------------------*/
+.back-top {
+	visibility: hidden;
+	border-radius: $border-radius;
+	opacity: $opacity-0;
+	background: var(--#{$prefix}white);
+	transition: $backtotop-transition-1;
+	&.backtop-is-visible {
+		transition: $backtotop-transition-2;
+		z-index: 99;
+		visibility: visible;
+		opacity: $opacity-1;
+	}
+	&.backtop-fade-out {
+		transition: $backtotop-transition-2;
+		opacity: $opacity-08;
+	}
+}
+.no-touch {
+	.back-top {
+		&:hover {
+			transition: $backtotop-transition-2;
+			background-color: var(--#{$prefix}primary);
+			opacity: $opacity-1;
+		}
+	}
+}

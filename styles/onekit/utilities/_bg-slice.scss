@@ -1,0 +1,74 @@
+/*------------------------------------
+  Background wrapper
+------------------------------------*/
+.bg-wrapper {
+    &-start {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: auto;
+        bottom: 0;
+    }
+    &-end {
+        position: absolute;
+        left: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &-top {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: auto;
+    }
+    &-bottom {
+        position: absolute;
+        left: 0;
+        top: auto;
+        right: 0;
+        bottom: 0;
+    }
+}
+// background width
+@for $wdt from 1 through 9 {
+  .w-#{$wdt*10} {
+    width: $wdt*10% !important;
+  }
+}
+
+// background height
+@for $hgt from 1 through 9 {
+  .h-#{$hgt*10} {
+    height: $hgt*10% !important;
+  }
+}
+// background mobile
+.bg-white {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+    &#{$infix} {
+      @include media-breakpoint-down($next) {
+        &-down {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}
+
+// Position auto
+.start-auto {
+  left: auto;
+}
+.end-auto {
+  right: auto;
+}
+.top-auto {
+  top: auto;
+}
+.bottom-auto {
+  bottom: auto;
+}

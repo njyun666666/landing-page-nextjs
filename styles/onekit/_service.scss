@@ -1,0 +1,117 @@
+/*------------------------------------
+  Services
+------------------------------------*/
+.three-service {
+  position: relative;
+}
+.four-service{
+  &-icon {
+    position: absolute;
+    top: $four-service-icon-top;
+    right: $four-service-icon-right;
+    max-width: $four-service-icon-max-width;
+    z-index: 1;
+    text-align: center;
+    i {
+      font-size: $four-service-icon-i-font-size;
+      line-height: $four-service-icon-i-line-height;
+    }
+  }
+  &-content {
+    padding-right: $four-service-content-padding-right;
+  }
+  .line {
+    content: '';
+    position: relative;
+    display: block;
+    width: $four-service-line-width;
+    height: $four-service-line-height;
+    background:var(--#{$prefix}primary);
+    border-radius: 25%;
+    margin-top: $four-service-line-margin-top;
+    margin-bottom: $four-service-line-margin-bottom;
+    &::after {
+      position: absolute;
+      content: "";
+      width: $four-service-line-after-width;
+      height: $four-service-line-after-height;
+      background:var(--#{$prefix}primary);
+      bottom: $four-service-line-after-bottom;
+      left: 0;
+    }
+  }
+}
+
+.five-service {
+  position: relative;
+  .service-icon {
+    span {
+      i {
+        font-size: $five-service-icon-font-size;
+        transition: all 0.3s ease-out 0s;
+      }
+      svg {
+        transition: all 0.3s ease-out 0s;
+      }
+    }
+    border-radius: 50%;
+    width: $five-service-width;
+    height: $five-service-height;
+    padding-top: $five-service-padding-top;
+    background:var(--#{$prefix}primary);
+    margin: 0 auto;
+    position: absolute;
+    top: $five-service-top;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transition: all 0.3s ease-out 0s;
+  }
+  .service-content {
+    background: $white;
+  }
+  .read-more {
+    display: block;
+    width: $five-service-readmore-width;
+    height: $five-service-readmore-height;
+    line-height: $five-service-readmore-line-height;
+    border-radius: 50%;
+    background: $white;
+    border: $five-service-readmore-border-width solid $border-color;
+    font-size: $five-service-readmore-font-size;
+    color: $five-service-readmore-color;
+    margin: 0 auto;
+    position: absolute;
+    bottom: $five-service-readmore-bottom;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-out 0s;
+    &:hover {
+      color:var(--#{$prefix}primary);
+    }
+  }
+}
+
+// Features
+.three-features {
+  position: relative;
+  padding-left: $three-features-padding-left;
+  margin-bottom: $three-features-margin-bottom;
+  .features-icon {
+    font-size: $three-features-icon-font-size;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: $three-features-padding-top;
+  }
+  &.features-end {
+    padding-right: $three-features-right-padding-right;
+    padding-left: $three-features-right-padding-left;
+    text-align: right;
+    .features-icon {
+      right: 0;
+      left: auto;
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+/*------------------------------------
+  Font size
+------------------------------------*/
+/* Font Size */
+.fs {
+  &-1 {
+    font-size: 1rem;
+  }
+
+  &-2 {
+    font-size: 2rem;
+  }
+  &-3 {
+    font-size: 3rem;
+  }
+  &-4 {
+    font-size: 4rem;
+  }
+  &-5 {
+    font-size: 5rem;
+  }
+  // font percent
+  &-50 {
+    font-size: 50%;
+  }
+  &-60 {
+    font-size: 60%;
+  }
+  &-70 {
+    font-size: 70%;
+  }
+  &-75 {
+    font-size: 75%;
+  }
+  &-80 {
+    font-size: 80%;
+  }
+  &-90 {
+    font-size: 90%;
+  }
+}
+
+/*------------------------------------
+  Font weight
+------------------------------------*/
+.fw {
+  &-medium {
+    font-weight: $font-weight-medium !important;
+  }
+  &-semi-bold {
+    font-weight: $font-weight-semi-bold !important;
+  }
+  &-800 {
+    font-weight: $font-weight-800 !important;
+  }
+  &-900 {
+    font-weight: $font-weight-900 !important;
+  }
+}

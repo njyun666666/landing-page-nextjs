@@ -1,0 +1,41 @@
+/*------------------------------------
+  Social
+------------------------------------*/
+.text {
+  &-twitter {
+    color: $twitter !important;
+  }
+  &-facebook {
+    color: $facebook !important;
+  }
+  &-instagram {
+    color: $instagram !important;
+  }
+  &-linkedin {
+    color: $linkedin !important;
+  }
+  &-youtube {
+    color: $youtube !important;
+  }
+}
+.hover-social {
+  a {
+    &:hover {
+      .facebook {
+        color: $facebook !important;
+      }
+      .twitter {
+        color: $twitter !important;
+      }
+      .instagram {
+        color: $instagram !important;
+      }
+      .linkedin {
+        color: $linkedin !important;
+      }
+      .youtube {
+        color: $youtube !important;
+      }
+    }
+  }
+}

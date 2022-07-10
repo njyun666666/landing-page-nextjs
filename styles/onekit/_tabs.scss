@@ -1,0 +1,17 @@
+/*----------------------------------
+  Tabs
+------------------------------------*/
+.tab-profile {
+  &>li {
+    &>a {
+      &>div {
+        background: $light;
+      }
+      &.active {
+        &>div {
+          background: $white;
+        }
+      }
+    }
+  }
+}

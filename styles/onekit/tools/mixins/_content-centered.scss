@@ -1,0 +1,19 @@
+//
+// Content Centered
+//
+
+// mixing for centering contents
+@mixin content-centered($one-horizontal: true, $one-vertical: true) {
+  position: absolute;
+  @if ($one-horizontal and $one-vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% * $transform-direction, -50%);
+  } @else if ($one-horizontal) {
+    left: 50%;
+    transform: translate(-50% * $transform-direction, 0);
+  } @else if ($one-vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}

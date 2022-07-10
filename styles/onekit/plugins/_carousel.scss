@@ -1,0 +1,95 @@
+/*----------------------------------
+  Flickity slider
+------------------------------------*/
+.flickity-enabled.is-fade .flickity-slider > * {
+  pointer-events: none;
+  z-index: 0;
+}
+.flickity-enabled.is-fade .flickity-slider > .is-selected {
+  pointer-events: auto;
+  z-index: 1;
+}
+.nav-dark-button {
+  .flickity-button {
+    background: rgba(197, 198, 208, .7);
+    color: #fff;
+    &:hover {
+      background: rgba(197, 198, 208, 1);
+    }
+  }
+}
+.nav-inset-button {
+  .flickity-button {
+    &.previous { 
+      left: 1.5rem;
+    }
+  }
+  .flickity-button {
+    &.next {
+      right: 1.5rem;
+    }
+  }
+}
+.flickity-prev-next-button .flickity-button-icon {
+  position: absolute;
+  left: 33%;
+  top: 33%;
+  width: 35%;
+  height: 35%;
+  opacity: .8;
+}
+.slider-item {
+  img {
+    cursor: pointer;
+  }
+}
+.dot-in-content {
+  .flickity-page-dots {
+    margin-bottom: 3rem;
+  }
+}
+.nav-light-dots {
+  .flickity-page-dots li {
+    background-color: $light;
+  }
+  .flickity-page-dots li.is-selected {
+    background-color: $white;
+  }
+}
+.hero-slider, .hero-slider2 {
+  .flickity-button {
+    &.previous {
+      opacity: 0;
+      transition: all 1.2s ease;
+    }
+  } 
+  .flickity-button {
+    &.next {
+      opacity: 0;
+      transition: all 1.2s ease;
+    }
+  }
+  &:hover {
+    .flickity-button.next,.flickity-button.previous {
+      opacity: 1;
+      transition: all 1.2s ease;
+    }
+  }
+  .flickity-page-dots {
+    bottom: 2rem;
+  }
+}
+.flickity-rtl {
+  .reviews {
+    &-one, &-two  {
+      &::before {
+        transform:rotate(180deg);
+      }
+    }
+    &-four, &-five {
+      &::after {
+        transform:rotate(180deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+//
+// rtl mixin
+//
+// RTL quote icon
+@mixin content-review() {
+  content: escape-svg($ltr-content-review);
+}
+// RTL quote icon 2
+@mixin content2-review() {
+  content: escape-svg($ltr-content2-review);
+}
+
+// arrow right light
+@mixin before-footer-category-light() {
+  background-image: escape-svg($before-footer-category-light);
+}
+
+// arrow right dark
+@mixin before-footer-category-dark() {
+  background-image: escape-svg($before-footer-category-dark);
+}

@@ -1,0 +1,13 @@
+/*------------------------------------
+	Border width
+------------------------------------*/
+.border {
+	// border smooth dark
+	&-smooth {
+		border-color: $border-smooth !important;
+	}
+	// border smooth light
+	&-smooth-light {
+		border-color: $border-smooth-light !important;
+	}
+}

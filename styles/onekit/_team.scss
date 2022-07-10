@@ -1,0 +1,155 @@
+/*------------------------------------
+  team
+------------------------------------*/
+.team, .team2, .team3, .team5 {
+  position: relative;
+  .team-info {
+    .team-info-content {
+      padding: $team-info-content-padding;
+      text-align: center;
+      .team-info-social {
+        margin-top: $team-info-content-margin-top;
+        a {
+          margin-right: $team-info-content-margin-right;
+        }
+      }
+    }
+  }
+}
+
+.team {
+  position: relative;
+  overflow: hidden;
+  .team-info {
+    .team-info-content {
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: -100%;
+      transition: bottom .4s ease-in-out 0s;
+      h4 {
+        line-height: 1.2 ;
+      }
+    }
+  }
+  &:hover {
+    .team-info-content {
+      opacity: 1;
+      bottom:0;
+    }
+  }
+  &2 {
+    position: relative;
+    overflow: hidden;
+    .team-thumb {
+      position: relative;
+      overflow: hidden;
+      img {
+        transition: .35s ease .2s;
+      }
+      .view-profile {
+        height: $team2-view-profile-height;
+        width: $team2-view-profile-width;
+        opacity: 0;
+        background-color: $white;
+        font-size: $team2-view-profile-font-size;
+        padding: $team2-view-profile-padding;
+        border-top-left-radius: $team2-view-profile-border-radius;
+        display: block;
+        opacity: 0;
+        position: absolute;
+        right: -100%;
+        bottom: 0;
+        transition: right .1s ease 0s;
+      }
+    }
+    &:hover {
+      .team-thumb {
+        img {
+          -webkit-transform: scale(1.1) rotate(5deg);
+          transform: scale(1.1) rotate(5deg);
+        }
+        .view-profile {
+          opacity: 1;
+          right: 0;
+        }
+      }
+    }
+  }
+  &3 {
+    padding: $team3-padding;
+    img {
+      transform: scale(1);
+      transition: all .5s ease-in-out 0s;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+    .team-thumb {
+      border: $light $team3-thumb-border-width solid;
+      overflow: hidden;
+    }
+  }
+  &4 {
+    overflow: hidden;
+    .team-thumb {
+      background-color: var(--#{$prefix}primary);
+      position: relative;
+      overflow: hidden;
+      .team-social {
+        padding: $team-social-padding;
+        background-color: $white;
+        left: $team-social-left;
+        right: $team-social-right;
+        position: absolute;
+        text-align: center;
+        bottom: $team-social-bottom;
+        ul {
+          li {
+            display: inline-block;
+            margin-right: $team-social-li-margin-right;
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      .team-social {
+        ul {
+          li {
+            a {
+              color: var(--#{$prefix}primary);
+            }
+          }
+        }
+      }
+    } 
+  }
+  &5 {
+    position: relative;
+    overflow: hidden;
+    img {
+      transform: scale(1);
+      transition: all .5s ease-in-out 0s;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+    .team-thumb {
+      overflow: hidden;
+    }
+    .team-info-social {
+      text-align: center;
+      a {
+        font-size: $team-info-social-font-size;
+        margin-right: $team-info-social-margin-right;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
