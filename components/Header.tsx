@@ -36,8 +36,8 @@ const Header = () => {
         <div className="container">
           <Link href="#">
             <a className="navbar-brand main-logo">
-              <img className="logo-light" src="/img-min/logo/logo-light.png" alt="LOGO" />
-              <img className="logo-dark" src="/img-min/logo/logo.png" alt="LOGO" />
+              <img className="logo-light" src={data?.logoLight} alt="LOGO" />
+              <img className="logo-dark" src={data?.logoDark} alt="LOGO" />
             </a>
           </Link>
 

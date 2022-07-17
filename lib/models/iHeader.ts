@@ -1,7 +1,8 @@
 export interface iHeader {
   headerId: number;
   menuGroupId: number;
-  logo: string;
+  logoLight: string;
+  logoDark: string;
   menus: iMenu[];
 }
 
