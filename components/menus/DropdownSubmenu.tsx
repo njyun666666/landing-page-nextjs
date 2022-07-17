@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 import { iMenu } from '../../lib/models/iHeader';
 
 const SubMenu = (subMenu: iMenu) => {
@@ -17,7 +18,11 @@ const SubMenu = (subMenu: iMenu) => {
       <a id={`sub${subMenu.menuId}`} className="dropdown-item dropdown-toggle" href="#">
         {subMenu.title}
       </a>
-      <ul className="submenu dropdown-menu">{subMenu.childrens.map((subMenuChild) => SubMenu(subMenuChild))}</ul>
+      <ul className="submenu dropdown-menu">
+        {subMenu.childrens.map((subMenuChild) => (
+          <React.Fragment key={subMenuChild.menuId}>SubMenu(subMenuChild)</React.Fragment>
+        ))}
+      </ul>
     </li>
   );
 };
@@ -36,7 +41,11 @@ const DropdownSubmenu = ({ menuData }: { menuData: iMenu }) => {
         {menuData.title}
       </a>
 
-      <ul className="dropdown-menu dropdown-menu-lg-center">{menuData.childrens.map((subMenu) => SubMenu(subMenu))}</ul>
+      <ul className="dropdown-menu dropdown-menu-lg-center">
+        {menuData.childrens.map((subMenu) => (
+          <React.Fragment key={subMenu.menuId}>SubMenu(subMenu)</React.Fragment>
+        ))}
+      </ul>
     </li>
   );
 };
