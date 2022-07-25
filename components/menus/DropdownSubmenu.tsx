@@ -20,7 +20,7 @@ const SubMenu = (subMenu: iMenu) => {
       </a>
       <ul className="submenu dropdown-menu">
         {subMenu.childrens.map((subMenuChild) => (
-          <React.Fragment key={subMenuChild.menuId}>SubMenu(subMenuChild)</React.Fragment>
+          <React.Fragment key={subMenuChild.menuId}>{SubMenu(subMenuChild)}</React.Fragment>
         ))}
       </ul>
     </li>
@@ -43,7 +43,7 @@ const DropdownSubmenu = ({ menuData }: { menuData: iMenu }) => {
 
       <ul className="dropdown-menu dropdown-menu-lg-center">
         {menuData.childrens.map((subMenu) => (
-          <React.Fragment key={subMenu.menuId}>SubMenu(subMenu)</React.Fragment>
+          <React.Fragment key={subMenu.menuId}>{SubMenu(subMenu)}</React.Fragment>
         ))}
       </ul>
     </li>
