@@ -13,6 +13,14 @@ const PageContainer = ({ pageData }: { pageData: iPage }) => {
     dispatch(setDarkToLight(pageData.headerColorMode));
   }, [dispatch, pageData.headerColorMode]);
 
+  useEffect(() => {
+    if (pageData.bodyNavFixed) {
+      document.querySelector('body')?.classList.add('body-nav-fixed');
+    } else {
+      document.querySelector('body')?.classList.remove('body-nav-fixed');
+    }
+  }, [pageData.bodyNavFixed]);
+
   return (
     <>
       <Head>

@@ -6,6 +6,7 @@ export interface iPage {
   title: string;
   description: string;
   headerColorMode: headerColorModeType;
+  bodyNavFixed: boolean;
   tbPageSections: iTbPageSection[];
 }
 
