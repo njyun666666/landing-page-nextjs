@@ -26,6 +26,7 @@ export interface iSection {
   title: string;
   subTitle: string;
   content: string;
+  particleIcon: string;
   item1: number;
   item1Navigation: iItem1Navigation;
 }
