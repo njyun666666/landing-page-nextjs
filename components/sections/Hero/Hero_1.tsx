@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { iSection } from '../../../lib/models/iPage';
-import Particle from '../../common/particle';
+import { Particle } from '../../common';
 
 export const Hero_1 = ({ sectionData }: { sectionData: iSection }) => {
   return (

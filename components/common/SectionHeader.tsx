@@ -1,6 +1,6 @@
 import { iSection } from '../../lib/models/iPage';
 
-const SectionHeader = ({ sectionData }: { sectionData: iSection }) => {
+export const SectionHeader = ({ sectionData }: { sectionData: iSection }) => {
   if (sectionData.title || sectionData.subTitle) {
     return (
       <header className="text-center mx-auto mb-5">
@@ -17,4 +17,3 @@ const SectionHeader = ({ sectionData }: { sectionData: iSection }) => {
     return <></>;
   }
 };
-export default SectionHeader;

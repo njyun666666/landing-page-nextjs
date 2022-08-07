@@ -1,4 +1,4 @@
-const Particle = ({ children }: React.PropsWithChildren) => {
+export const Particle = ({ children }: React.PropsWithChildren) => {
   return (
     <div className="particle">
       <div className="particle-move-up d-none d-lg-block particle-move-up-1 text-light z-index-n1 opacity-60">
@@ -23,5 +23,3 @@ const Particle = ({ children }: React.PropsWithChildren) => {
     </div>
   );
 };
-
-export default Particle;

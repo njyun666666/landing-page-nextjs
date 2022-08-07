@@ -1,5 +1,5 @@
 import { iSection } from '../../../lib/models/iPage';
-import SectionHeader from '../../common/SectionHeader';
+import { SectionHeader } from '../../common';
 
 export const FAQ_1 = ({ sectionData }: { sectionData: iSection }) => {
   return (

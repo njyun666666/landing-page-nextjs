@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { iSection } from '../../../lib/models/iPage';
-import SectionHeader from '../../common/SectionHeader';
+import { SectionHeader } from '../../common';
 
 export const Service_1 = ({ sectionData }: { sectionData: iSection }) => {
   return (
