@@ -10,7 +10,11 @@ const Slider = ({ children, options }: { children: React.ReactNode; options: Fli
     }
   }, [children, options]);
 
-  return <div ref={divRef}>{children}</div>;
+  return (
+    <div ref={divRef} className="nav-dark-button">
+      {children}
+    </div>
+  );
 };
 
 export default Slider;
