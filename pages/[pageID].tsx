@@ -2,8 +2,8 @@ import { InferGetServerSidePropsType } from 'next';
 import PageContainer from '../components/PageContainer';
 import pageAPI from '../lib/api/page.api';
 
-export async function getServerSideProps() {
-  var pageData = await pageAPI.get('index');
+export async function getServerSideProps({ params }: { params: { pageID: string } }) {
+  var pageData = await pageAPI.get(params.pageID);
   return {
     props: { pageData: pageData.data },
   };

@@ -14,9 +14,11 @@ export const Hero_1 = ({ sectionData }: { sectionData: iSection }) => {
       <div className="overlay opacity-90 z-index-n1" style={{ backgroundColor: sectionData.backgroundColor }}></div>
 
       {/* <!-- moving up animation --> */}
-      <Particle>
-        <i className={sectionData.particleIcon}></i>
-      </Particle>
+      {sectionData.particleIcon && (
+        <Particle>
+          <i className={sectionData.particleIcon}></i>
+        </Particle>
+      )}
 
       {/* <!-- scribble --> */}
       <figure
