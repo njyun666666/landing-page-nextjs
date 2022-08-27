@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { iSection } from '../../../lib/models/iPage';
 import { SectionHeader } from '../../common';
 
-export const Service_1 = ({ sectionData }: { sectionData: iSection }) => {
+const Service_1 = ({ sectionData }: { sectionData: iSection }) => {
   return (
     <div id="service" className="section pt-6 pt-md-7 pb-4 pb-md-5 bg-light">
       <div className="container">
@@ -46,3 +46,5 @@ export const Service_1 = ({ sectionData }: { sectionData: iSection }) => {
     </div>
   );
 };
+
+export default Service_1;

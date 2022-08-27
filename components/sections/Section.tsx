@@ -1,14 +1,16 @@
 import { iSection } from '../../lib/models/iPage';
-import { FAQ_1 } from './FAQ';
-import { Hero_1 } from './Hero';
-import { Reviews_1 } from './Reviews';
-import { Service_1 } from './Service';
+import { Brand } from './Brand';
+import { FAQ } from './FAQ';
+import { Hero } from './Hero';
+import { Reviews } from './Reviews';
+import { Service } from './Service';
 
 const sectionComponent: any = {
-  Hero_1,
-  Service_1,
-  FAQ_1,
-  Reviews_1,
+  ...Hero,
+  ...Service,
+  ...FAQ,
+  ...Reviews,
+  ...Brand,
 };
 
 const Section = ({ sectionData }: { sectionData: iSection }) => {

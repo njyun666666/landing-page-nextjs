@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { iSection } from '../../../lib/models/iPage';
 import { Particle } from '../../common';
 
-export const Hero_1 = ({ sectionData }: { sectionData: iSection }) => {
+const Hero_1 = ({ sectionData }: { sectionData: iSection }) => {
   return (
     <div
       id="hero"
@@ -172,3 +172,5 @@ export const Hero_1 = ({ sectionData }: { sectionData: iSection }) => {
     </div>
   );
 };
+
+export default Hero_1;

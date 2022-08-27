@@ -2,7 +2,7 @@
 import { iSection } from '../../../lib/models/iPage';
 import { Ratings, SectionHeader, Slider } from '../../common';
 
-export const Reviews_1 = ({ sectionData }: { sectionData: iSection }) => {
+const Reviews_1 = ({ sectionData }: { sectionData: iSection }) => {
   return (
     // <!-- =========={ REVIEWS }==========  -->
     <div id="reviews" className="section py-6 py-md-7 bg-light">
@@ -56,3 +56,5 @@ export const Reviews_1 = ({ sectionData }: { sectionData: iSection }) => {
     </div>
   );
 };
+
+export default Reviews_1;
