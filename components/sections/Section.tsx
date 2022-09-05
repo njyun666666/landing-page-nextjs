@@ -1,5 +1,6 @@
 import { iSection } from '../../lib/models/iPage';
 import { Brand } from './Brand';
+import { Collage } from './Collage';
 import { FAQ } from './FAQ';
 import { Hero } from './Hero';
 import { Reviews } from './Reviews';
@@ -11,6 +12,7 @@ const sectionComponent: any = {
   ...FAQ,
   ...Reviews,
   ...Brand,
+  ...Collage,
 };
 
 const Section = ({ sectionData }: { sectionData: iSection }) => {

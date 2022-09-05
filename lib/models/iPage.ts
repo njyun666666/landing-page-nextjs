@@ -28,7 +28,9 @@ export interface iSection {
   content: string;
   particleIcon: string;
   item1: number;
+  item2: number;
   item1Navigation: iItem1Navigation;
+  item2Navigation: iItem1Navigation;
 }
 
 export interface iItem1Navigation {

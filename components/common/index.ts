@@ -4,3 +4,4 @@ export * from './Ratings';
 export * from './SectionHeader';
 export * from './Particle';
 export const Slider = dynamic(() => import('./Slider'), { ssr: false });
+export const LightBox = dynamic(() => import('lightgallery/react'), { ssr: false });
