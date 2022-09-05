@@ -9,6 +9,7 @@ import { store } from '../lib/store/store';
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     typeof document !== undefined ? require('bootstrap/dist/js/bootstrap') : null;
+    typeof document !== undefined ? require('waypoints/lib/noframework.waypoints') : null;
   }, []);
 
   return (
